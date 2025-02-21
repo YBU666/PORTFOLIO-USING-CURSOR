@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #333;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+
+        /* Projects Grid */
+        .projects {
+            padding: 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 2rem;
+            background: #f4f4f4;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="https://png.pngtree.com/png-vector/20220817/ourmid/pngtree-cartoon-man-avatar-vector-ilustration-png-image_6111064.png" alt="Profile Image" class="profile-img">
+        
+        <h1>Yashwanth B U</h1>
+        <p>Computer Science undergraduate</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://www.shutterstock.com/image-vector/illustration-yellow-school-bus-flat-600nw-2246845245.jpg" alt="Bus Ticket Blockchain Service">
+                <h3>Bus Ticket Blockchain Service</h3>
+                <p>A decentralized bus ticket booking system that allows users to purchase tickets securely using MetaMask wallet and blockchain technology</p>
+            </div>
+            <div class="project-card">
+                <img src="https://img.freepik.com/premium-vector/vector-illustration-gardener-working-garden-with-flowers_1142-88198.jpg" alt="AI Agriculture Assistant">
+                <h3>AI Agriculture Assistant</h3>
+                <p>An intelligent farming assistant powered by Google's Gemini API that helps farmers optimize crop management and make data-driven decisions</p>
+            </div>
+            <div class="project-card">
+                <img src="https://www.shutterstock.com/image-illustration/stock-market-boom-financial-gains-260nw-1685010451.jpg" alt="Stock Price Prediction using LSTM">
+                <h3>Stock Price Prediction using LSTM</h3>
+                <p>A machine learning model using LSTM (Long Short-Term Memory) networks to predict Google and Tesla stock prices based on historical data and market trends</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
